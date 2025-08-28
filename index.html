@@ -22,7 +22,7 @@
     <nav  class="flex justify-between items-center px-12 py-[16px] bg-white">
           <div class="logo_div flex items-center gap-3">
       <div>
-         <img src="./assets/logo.png" alt="" class="w-[60px] h-[60px]">
+         <img src="./assets/logo.png" alt="logo" class="w-[60px] h-[60px]">
       </div>
       <div>
         <h1 class="text-[#006747] font-extrabold text-3xl leading-[1] ">Emergency<br>Service</h1>
@@ -30,15 +30,15 @@
     </div> 
 
     <div class="flex items-center gap-5">
-        <div class="hert_div flex justify-center items-center bg-[#41ff6a31] w-[123px] h-[52px] m-auto rounded-full gap-2">
-          <h2 class="font-bold-bold">0</h2>
-          <img src="./assets/heart.png" alt="" class="w-8 h-8">
+        <div class="flex justify-center items-center bg-[#41ff6a31] px-4 md:px-6 py-2 md:py-3 rounded-full gap-2">
+          <span id="heartCount" class="font-bold">0</span>
+          <img src="./assets/heart.png"  class="w-8 h-8" alt="heart">
         </div>
-        <div class="hert_div flex justify-center items-center bg-[#41ff6a31] w-[123px] h-[52px] m-auto rounded-full gap-2">
-          <h2 class="font-bold">100</h2>
-          <img src="./assets/coin.png" alt="" class="w-8 h-8">
+        <div class="hert_div flex justify-center items-center bg-[#41ff6a31]  w-[123px] h-[52px] m-auto rounded-full gap-2">
+          <h2 id="coin_nubmer" class="font-bold">100</h2>
+          <img src="./assets/coin.png" alt="" id="coin_png" class="w-8 h-8">
         </div>
-        <button class="btn bg-[#00A63E] text-[#08080880] rounded-full w-[127px] h-[52px] font-bold text-[16px] text-white "><span>0</span>copy</button>
+        <button class="btn bg-[#00A63E] text-[#08080880] rounded-full w-[127px] h-[52px] font-bold text-[16px] text-white "><span id="copy_count">0</span>copy</button>
     </div>
     </nav>
 <!-- Hero section -->
@@ -53,18 +53,24 @@
   </header>
   
   <main class="max-w-[1800px] mx-auto px-4">
-  <section id="coards_section" class="bg-[#ecfff0] w-11/12 mx-auto  px-6 py-10 grid grid-cols-12 gap-10">
-    <section id="card_box" class="col-span-9">
+    <!-- card box area -->
+  <section class="bg-[#ecfff0] w-11/12 mx-auto px-6 py-10 grid grid-cols-12 gap-8">
+          <div id="cardBox" class="col-span-9">
              
-        <div class="card_item grid grid-cols-3 gap-10">
+        <div id="card_box"
+         class=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
 
           <!-- ----card-1------------- -->
-          <div class="card bg-white p-4 rounded-xl shadow-md w-90">
-                <div class="flex justify-between items-start">
+          <div class="card bg-white p-4
+           rounded-xl shadow-md w-90">
+                <div class="flex justify-between items-center items-start ">
                   <div class="bg-[#FFE3E2] rounded-lg p-3">
                     <img src="./assets/emergency.png" alt="Emergency" class="w-12 h-12"/>
                   </div>
-                  <button id="heart_icon" class="heartBtn text-3xl">
+                  <div>
+                    
+                  </div>
+                  <button class="heartBtn text-3xl">
                     <i class="fa-regular fa-heart"></i>
                   </button>
                 </div>
@@ -78,10 +84,10 @@
                 </div>
                 <div class="flex gap-2 mt-4">
                   <button
-                    class="copyBtn flex items-center justify-center gap-2 flex-1 border rounded-lg py-2 text-gray-600"><i class="fa-regular fa-copy"></i>Copy</button>
+                    class="copyBtn flex justify-center items-center gap-2 flex-1 border rounded-lg py-2 text-gray-600 hover:bg-slate-600 hover:text-white font-semibold"><i class="fa-regular fa-copy"></i>Copy</button>
 
                   <button
-                    class="callBtn flex items-center justify-center gap-2 flex-1 bg-green-600 text-white rounded-lg py-2"><i class="fa-solid fa-phone"></i>Call </button>
+                    class="callBtn flex items-center justify-center gap-2 flex-1 bg-green-600 text-white rounded-lg py-2 hover:bg-slate-600 font-semibold"><i class="fa-solid fa-phone "></i>Call</button>
                </div>
           </div>
           <!-- ----------------- -->
@@ -105,11 +111,11 @@
                 </div>
                 <div class="flex gap-2 mt-4">
                   <button
-                    class="copyBtn flex items-center justify-center gap-2 flex-1 border rounded-lg py-2 text-gray-600"><i class="fa-regular fa-copy"></i>Copy</button>
+                    class="copyBtn flex justify-center items-center gap-2 flex-1 border rounded-lg py-2 text-gray-600 hover:bg-slate-600 hover:text-white font-semibold"><i class="fa-regular fa-copy"></i>Copy</button>
 
                   <button
-                    class="callBtn flex items-center justify-center gap-2 flex-1 bg-green-600 text-white rounded-lg py-2"><i class="fa-solid fa-phone"></i>Call </button>
-               </div>
+                    class="callBtn flex items-center justify-center gap-2 flex-1 bg-green-600 text-white rounded-lg py-2 hover:bg-slate-600 font-semibold"><i class="fa-solid fa-phone "></i>Call</button>
+                </div>
           </div>
           <!-- ----------------- -->
           <!-- ----card-3------------- -->
@@ -130,13 +136,13 @@
                     class="inline-block text-xs px-3 py-1 bg-gray-100 text-gray-600 rounded-full mt-2"
                     >Fire</span>
                 </div>
-                <div class="flex gap-2 mt-4">
+                 <div class="flex gap-2 mt-4">
                   <button
-                    class="copyBtn flex items-center justify-center gap-2 flex-1 border rounded-lg py-2 text-gray-600"><i class="fa-regular fa-copy"></i>Copy</button>
+                    class="copyBtn flex justify-center items-center gap-2 flex-1 border rounded-lg py-2 text-gray-600 hover:bg-slate-600 hover:text-white font-semibold"><i class="fa-regular fa-copy"></i>Copy</button>
 
                   <button
-                    class="callBtn flex items-center justify-center gap-2 flex-1 bg-green-600 text-white rounded-lg py-2"><i class="fa-solid fa-phone"></i>Call </button>
-               </div>
+                    class="callBtn flex items-center justify-center gap-2 flex-1 bg-green-600 text-white rounded-lg py-2 hover:bg-slate-600 font-semibold"><i class="fa-solid fa-phone "></i>Call</button>
+                </div>
           </div>
           <!-- ----card-4------------- -->
           <div class="card bg-white p-4 rounded-xl shadow-md w-90">
@@ -156,13 +162,13 @@
                     class="inline-block text-xs px-3 py-1 bg-gray-100 text-gray-600 rounded-full mt-2"
                     >Health</span>
                 </div>
-                <div class="flex gap-2 mt-4">
+                  <div class="flex gap-2 mt-4">
                   <button
-                    class="copyBtn flex items-center justify-center gap-2 flex-1 border rounded-lg py-2 text-gray-600"><i class="fa-regular fa-copy"></i>Copy</button>
+                    class="copyBtn flex justify-center items-center gap-2 flex-1 border rounded-lg py-2 text-gray-600 hover:bg-slate-600 hover:text-white font-semibold"><i class="fa-regular fa-copy"></i>Copy</button>
 
                   <button
-                    class="callBtn flex items-center justify-center gap-2 flex-1 bg-green-600 text-white rounded-lg py-2"><i class="fa-solid fa-phone"></i>Call </button>
-               </div>
+                    class="callBtn flex items-center justify-center gap-2 flex-1 bg-green-600 text-white rounded-lg py-2 hover:bg-slate-600 font-semibold"><i class="fa-solid fa-phone "></i>Call</button>
+                  </div>
           </div>
           <!-- ----------------- -->
           <!-- ----card-5------------- -->
@@ -185,11 +191,11 @@
                 </div>
                 <div class="flex gap-2 mt-4">
                   <button
-                    class="copyBtn flex items-center justify-center gap-2 flex-1 border rounded-lg py-2 text-gray-600"><i class="fa-regular fa-copy"></i>Copy</button>
+                    class="copyBtn flex justify-center items-center gap-2 flex-1 border rounded-lg py-2 text-gray-600 hover:bg-slate-600 hover:text-white font-semibold"><i class="fa-regular fa-copy"></i>Copy</button>
 
                   <button
-                    class="callBtn flex items-center justify-center gap-2 flex-1 bg-green-600 text-white rounded-lg py-2"><i class="fa-solid fa-phone"></i>Call </button>
-               </div>
+                    class="callBtn flex items-center justify-center gap-2 flex-1 bg-green-600 text-white rounded-lg py-2 hover:bg-slate-600 font-semibold"><i class="fa-solid fa-phone "></i>Call</button>
+                </div>
           </div>
           <!-- ----------------- -->
           <!-- ----card-6------------- -->
@@ -212,11 +218,11 @@
                 </div>
                 <div class="flex gap-2 mt-4">
                   <button
-                    class="copyBtn flex items-center justify-center gap-2 flex-1 border rounded-lg py-2 text-gray-600"><i class="fa-regular fa-copy"></i>Copy</button>
+                    class="copyBtn flex justify-center items-center gap-2 flex-1 border rounded-lg py-2 text-gray-600 hover:bg-slate-600 hover:text-white font-semibold"><i class="fa-regular fa-copy"></i>Copy</button>
 
                   <button
-                    class="callBtn flex items-center justify-center gap-2 flex-1 bg-green-600 text-white rounded-lg py-2"><i class="fa-solid fa-phone"></i>Call </button>
-               </div>
+                    class="callBtn flex items-center justify-center gap-2 flex-1 bg-green-600 text-white rounded-lg py-2 hover:bg-slate-600 font-semibold"><i class="fa-solid fa-phone "></i>Call</button>
+                </div>
           </div>
           <!-- ----card-7------------- -->
           <div class="card bg-white p-4 rounded-xl shadow-md w-90">
@@ -236,13 +242,13 @@
                     class="inline-block text-xs px-3 py-1 bg-gray-100 text-gray-600 rounded-full mt-2"
                     >Electricity</span>
                 </div>
-                <div class="flex gap-2 mt-4">
+                  <div class="flex gap-2 mt-4">
                   <button
-                    class="copyBtn flex items-center justify-center gap-2 flex-1 border rounded-lg py-2 text-gray-600"><i class="fa-regular fa-copy"></i>Copy</button>
+                    class="copyBtn flex justify-center items-center gap-2 flex-1 border rounded-lg py-2 text-gray-600 hover:bg-slate-600 hover:text-white font-semibold"><i class="fa-regular fa-copy"></i>Copy</button>
 
                   <button
-                    class="callBtn flex items-center justify-center gap-2 flex-1 bg-green-600 text-white rounded-lg py-2"><i class="fa-solid fa-phone"></i>Call </button>
-               </div>
+                    class="callBtn flex items-center justify-center gap-2 flex-1 bg-green-600 text-white rounded-lg py-2 hover:bg-slate-600 font-semibold"><i class="fa-solid fa-phone "></i>Call</button>
+                  </div>
           </div>
           <!-- ----------------- -->
           <!-- ----card-8------------- -->
@@ -263,13 +269,13 @@
                     class="inline-block text-xs px-3 py-1 bg-gray-100 text-gray-600 rounded-full mt-2"
                     >NGO</span>
                 </div>
-                <div class="flex gap-2 mt-4">
+                  <div class="flex gap-2 mt-4">
                   <button
-                    class="copyBtn flex items-center justify-center gap-2 flex-1 border rounded-lg py-2 text-gray-600"><i class="fa-regular fa-copy"></i>Copy</button>
+                    class="copyBtn flex justify-center items-center gap-2 flex-1 border rounded-lg py-2 text-gray-600 hover:bg-slate-600 hover:text-white font-semibold"><i class="fa-regular fa-copy"></i>Copy</button>
 
                   <button
-                    class="callBtn flex items-center justify-center gap-2 flex-1 bg-green-600 text-white rounded-lg py-2"><i class="fa-solid fa-phone"></i>Call </button>
-               </div>
+                    class="callBtn flex items-center justify-center gap-2 flex-1 bg-green-600 text-white rounded-lg py-2 hover:bg-slate-600 font-semibold"><i class="fa-solid fa-phone "></i>Call</button>
+                  </div>
           </div>
           <!-- ----------------- -->
           <!-- ----card-9------------- -->
@@ -292,28 +298,29 @@
                 </div>
                 <div class="flex gap-2 mt-4">
                   <button
-                    class="copyBtn flex items-center justify-center gap-2 flex-1 border rounded-lg py-2 text-gray-600"><i class="fa-regular fa-copy"></i>Copy</button>
+                    class="copyBtn flex justify-center items-center gap-2 flex-1 border rounded-lg py-2 text-gray-600 hover:bg-slate-600 hover:text-white font-semibold"><i class="fa-regular fa-copy"></i>Copy</button>
 
                   <button
-                    class="callBtn flex items-center justify-center gap-2 flex-1 bg-green-600 text-white rounded-lg py-2"><i class="fa-solid fa-phone"></i>Call </button>
-               </div>
+                    class="callBtn flex items-center justify-center gap-2 flex-1 bg-green-600 text-white rounded-lg py-2 hover:bg-slate-600 font-semibold"><i class="fa-solid fa-phone "></i>Call</button>
+                </div>
           </div>
 
         </div>
           <!-- ----------------- -->
-  
-      
-    </section>
-
-    <aside id="history_box" class="bg-white p-4 rounded-xl shadow-md col-span-3">
+          </div>
+<!-- History area -->
+    <aside class="bg-white p-4 rounded-xl shadow-md col-span-3">
       <div class="flex justify-between items-center">
           <h1 class="font-semibold text-[16px]"><i class="fa-regular fa-clock pr-2"></i>Call History</h1>
-          <button class=" flex items-center justify-center text-center w-[80px] h-[40px] bg-green-600 text-white rounded-full">Clear</button>
+          <button id="clear_history_btn" class=" flex items-center justify-center text-center w-[80px] h-[40px] bg-green-600 text-white rounded-full">Clear</button>
       </div>
-    
+      <ul id="history_list" class="space-y-2 text-sm text-gray-700"></ul>
+
     </aside>
   </section>
+
+
   </main> 
-  <script src="./index.js"></script>
+  <script src="index.js"></script>
 </body>
 </html>
