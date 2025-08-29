@@ -17,13 +17,13 @@ cardBox.addEventListener("click", (e) => {
   const copyBtn = target.closest(".copyBtn");
   const callBtn = target.closest(".callBtn");
 
-  // Heart Button
+  // Heart Button--------------
   if (heartBtn) {
     hearts++;
     heartCount.textContent = hearts;
   }
 
-  // Copy Button
+  // Copy Button----------
   if (copyBtn) {
     const card = copyBtn.closest(".card");
     const number = card.querySelector(".number").textContent;
@@ -33,22 +33,23 @@ cardBox.addEventListener("click", (e) => {
     copyCount.textContent = copies;
   }
 
-  // Call Button
+  // Call Button---------
   if (callBtn) {
     const card = callBtn.closest(".card");
     const number = card.querySelector(".number").textContent;
     const name = card.querySelector("h4").textContent;
 
     if (coins < 20) {
-      alert("❌ Not enough coins to make a call!");
+      alert("Not enough coins to make a call!");
       return;
     }
 
     coins -= 20;
     coinNubmer.textContent = coins;
 
-    alert(`📞 Calling ${name} at ${number}`);
+    alert(`Calling ${name} at ${number}`);
 
+    // Time part js------
     const time = new Date().toLocaleTimeString("en-BD", {
       hour: "2-digit",
       minute: "2-digit",
@@ -57,6 +58,8 @@ cardBox.addEventListener("click", (e) => {
       timeZone: "Asia/Dhaka",
     });
 
+
+    // Call List history part-----------------
     const li = document.createElement("li");
     li.innerHTML = `
       <div class="flex justify-between items-center bg-gray-100 p-3 rounded-lg mb-2">
